@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.chc_pc.finalfinaltry.MainActivity">
+
+    <EditText
+        android:id="@+id/main2ip"
+        android:layout_width="0.01dp"
+        android:layout_height="0.01dp" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="wifi通信设计"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/mainwenduxianshi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="80dp"
+        android:text="温度"
+        android:textSize="25sp"/>
+
+    <TextView
+        android:id="@+id/mainshiduxianshi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/mainwenduxianshi"
+        android:layout_alignBottom="@+id/mainwenduxianshi"
+        android:layout_alignParentRight="true"
+        android:text="湿度"
+        android:textSize="25sp"/>
+
+    <Button
+        android:id="@+id/mainled1kaiguan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/mainwenduxianshi"
+        android:layout_marginTop="63dp"
+        android:text="LED1开关"/>
+
+    <Button
+        android:id="@+id/mainled2kaiguan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/mainled1kaiguan"
+        android:layout_alignBottom="@+id/mainled1kaiguan"
+        android:layout_alignParentRight="true"
+        android:text="LED2开关" />
+
+    <Button
+        android:id="@+id/mainled3kaiguan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/mainled1kaiguan"
+        android:layout_marginTop="49dp"
+        android:text="LED3开关" />
+
+    <Button
+        android:id="@+id/mainbeerkaiguan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/mainled3kaiguan"
+        android:layout_alignBottom="@+id/mainled3kaiguan"
+        android:layout_alignParentRight="true"
+        android:text="蜂鸣器开关" />
+
+    <Button
+        android:id="@+id/maindiancisuokaiguan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mainbeerkaiguan"
+        android:layout_centerHorizontal="true"
+        android:text="电磁锁开关" />
+
+</RelativeLayout>
