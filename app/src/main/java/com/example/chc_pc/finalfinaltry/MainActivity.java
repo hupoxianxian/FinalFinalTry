@@ -19,6 +19,7 @@ import android.content.SharedPreferences.Editor;
 import android.content.pm.ActivityInfo;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -41,6 +42,7 @@ public class MainActivity extends Activity {
     Button ipcontrol;
     EditText IPText;
     TextView wendu,shidu;
+    EditText wen,shi;
     Button led1btn,led2btn,led3btn;
     Button diancisuobtn;
     Button beerbtn;
@@ -70,6 +72,8 @@ public class MainActivity extends Activity {
 
         wendu=(TextView)findViewById(R.id.mainwenduxianshi);
         shidu=(TextView)findViewById(R.id.mainshiduxianshi);
+        wen=(EditText) findViewById(R.id.mainwendu);
+        shi=(EditText) findViewById(R.id.mainshidu);
 
         led1btn=(Button)findViewById(R.id.mainled1kaiguan);
         led2btn=(Button)findViewById(R.id.mainled2kaiguan);
@@ -279,8 +283,16 @@ public class MainActivity extends Activity {
         private void refreshView(byte[] buffer) {
             hum =  (buffer[0]&0xff);
             tem =  (buffer[2]&0xff);
-            wendu.setText("温度:"+tem+"℃");
-            shidu.setText("湿度:"+hum+"%");
+            wen.setText(tem+"℃");
+            shi.setText(hum+"%");
+            if(hum>80||hum<5)
+                shi.setTextColor(Color.rgb(255,0,0));
+            else
+                shi.setTextColor(Color.rgb(0,0,0));
+            if(tem>40||tem<0)
+                wen.setTextColor(Color.rgb(255,0,0));
+            else
+                wen.setTextColor(Color.rgb(0,0,0));
         }
     };
 

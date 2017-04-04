@@ -17,7 +17,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:text="wifi通信设计"
+        android:text="智能楼宇监控管理系统"
         android:textSize="20sp"/>
 
     <TextView
@@ -27,61 +27,87 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginTop="80dp"
-        android:text="温度"
+        android:text="温度: "
+        android:layout_marginLeft="20dp"
         android:textSize="25sp"/>
+
+    <EditText
+        android:id="@+id/mainwendu"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:layout_toRightOf="@id/mainwenduxianshi"
+        android:layout_alignBottom="@id/mainwenduxianshi"/>
 
     <TextView
         android:id="@+id/mainshiduxianshi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/mainwenduxianshi"
-        android:layout_alignBottom="@+id/mainwenduxianshi"
-        android:layout_alignParentRight="true"
-        android:text="湿度"
+        android:layout_below="@id/mainwenduxianshi"
+        android:layout_marginTop="30dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="20dp"
+        android:text="湿度: "
         android:textSize="25sp"/>
 
-    <Button
-        android:id="@+id/mainled1kaiguan"
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/mainshidu"
+        android:layout_width="80dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/mainwenduxianshi"
-        android:layout_marginTop="63dp"
-        android:text="LED1开关"/>
+        android:textSize="18sp"
+        android:gravity="center"
+        android:layout_toRightOf="@id/mainshiduxianshi"
+        android:layout_alignBottom="@id/mainshiduxianshi"/>
+
 
     <Button
         android:id="@+id/mainled2kaiguan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/mainled1kaiguan"
-        android:layout_alignBottom="@+id/mainled1kaiguan"
         android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="20dp"
         android:text="LED2开关" />
+
+    <Button
+        android:id="@+id/mainled1kaiguan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_above="@id/mainled2kaiguan"
+        android:layout_marginBottom="60dp"
+        android:layout_marginRight="20dp"
+        android:text="LED1开关"/>
 
     <Button
         android:id="@+id/mainled3kaiguan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/mainled1kaiguan"
-        android:layout_marginTop="49dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/mainled2kaiguan"
+        android:layout_marginTop="60dp"
+        android:layout_marginRight="20dp"
         android:text="LED3开关" />
 
     <Button
         android:id="@+id/mainbeerkaiguan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/mainled3kaiguan"
-        android:layout_alignBottom="@+id/mainled3kaiguan"
-        android:layout_alignParentRight="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="280dp"
+        android:layout_marginLeft="20dp"
         android:text="蜂鸣器开关" />
 
     <Button
         android:id="@+id/maindiancisuokaiguan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/mainbeerkaiguan"
-        android:layout_centerHorizontal="true"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/mainbeerkaiguan"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
         android:text="电磁锁开关" />
 
 </RelativeLayout>
